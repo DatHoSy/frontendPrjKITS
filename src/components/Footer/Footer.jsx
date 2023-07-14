@@ -22,6 +22,7 @@ const StyledFooter = styled.div`
     }
 `
 export const Footer = () => {
+    
     return (
         <StyledFooter>
             <hr className='line-white'/>

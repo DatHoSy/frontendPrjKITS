@@ -1,6 +1,6 @@
 import { Banner } from 'components/Banner';
 import { Genres } from 'components/Genres/Genres';
-import { GirdMovie } from 'components/Gird';
+import { GridMovie } from 'components/Grid';
 import { Header } from 'components/Header';
 import { ShowCase } from 'components/ShowCase';
 import { Slider } from 'components/Slider/Slider';
@@ -69,9 +69,9 @@ const StyledHomePage = styled.div`
                 padding-bottom: 35px;
             }
         }
-        .gird-movie {
+        .grid-movie {
             margin: 0 35px;
-            .gird-content {
+            .grid-content {
                 .card img {
                     width: 160px;
                     height: 240px;
@@ -146,7 +146,7 @@ const StyledHomePage = styled.div`
                 padding-bottom: 15px;
             }
         }
-        .gird-movie {
+        .grid-movie {
             margin: 0 20px;
             .title {
                 margin: 30px 0;
@@ -155,7 +155,7 @@ const StyledHomePage = styled.div`
                     padding: 0;
                 }
             }
-            .gird-content {
+            .grid-content {
                 gap: 20px;
                 .card img {
                     width: 125px;
@@ -176,7 +176,7 @@ const StyledHomePage = styled.div`
                     right: 45px;
                 }
                 
-                .gird-block1, .gird-block2 {
+                .grid-block1, .grid-block2 {
                     gap: 10px;
                 }
             }
@@ -264,7 +264,7 @@ const StyledHomePage = styled.div`
                 padding-bottom: 15px;
             }
         }
-        .gird-movie {
+        .grid-movie {
             margin: 0 20px;
             .title {
                 margin: 30px 0;
@@ -273,7 +273,7 @@ const StyledHomePage = styled.div`
                     padding: 0;
                 }
             }
-            .gird-content {
+            .grid-content {
                 gap: 20px;
                 .card img {
                     width: 110px;
@@ -294,7 +294,7 @@ const StyledHomePage = styled.div`
                     right: 45px;
                 }
                 
-                .gird-block1, .gird-block2 {
+                .grid-block1, .grid-block2 {
                     gap: 10px;
                     .block1-movie5, .block2-movie5 {
                         display: none;
@@ -382,7 +382,7 @@ const StyledHomePage = styled.div`
                 padding-bottom: 15px;
             }
         }
-        .gird-movie {
+        .grid-movie {
             margin: 0 20px;
             .title {
                 margin: 30px 0;
@@ -391,7 +391,7 @@ const StyledHomePage = styled.div`
                     padding: 0;
                 }
             }
-            .gird-content {
+            .grid-content {
                 gap: 20px;
                 .card img {
                     width: 70px;
@@ -413,7 +413,7 @@ const StyledHomePage = styled.div`
                     right: 25px;
                 }
                 
-                .gird-block1, .gird-block2 {
+                .grid-block1, .grid-block2 {
                     gap: 10px;
                     .block1-movie5, .block2-movie5 {
                         display: none;
@@ -424,6 +424,7 @@ const StyledHomePage = styled.div`
     }
 `
 const HomePage = () => {
+    
     return (
         <StyledHomePage>
             <Banner></Banner>
@@ -431,7 +432,7 @@ const HomePage = () => {
             {/* <Header/> */}
             {/* <Slider></Slider> */}
             <Genres></Genres>
-            <GirdMovie></GirdMovie>
+            <GridMovie></GridMovie>
         </StyledHomePage>
     )
 }

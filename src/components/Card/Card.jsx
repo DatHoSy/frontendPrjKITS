@@ -31,15 +31,16 @@ const StyledCard = styled.div`
         }
     }
 `
-export const Card = ({title, genres, srcImg, width, height, isGird, title_center, font_size, font_weight, line_height, radius, ...res}) => {
+export const Card = ({title, genres, srcImg, width, height, isGrid, title_center, font_size, font_weight, line_height, radius, ...res}) => {
     return (
         <StyledCard width = {width} height = {height} title_center = {title_center} font_size = {font_size} font_weight = {font_weight} line_height = {line_height} radius = {radius} {...res}>
             <div className="card">
                 <div className="avatar">
-                    {srcImg ? <img src={filmAvatar} alt="" /> : <img src={filmBladeRunner} alt="" />}
+                    {/* {srcImg ? <img src={filmAvatar} alt="" /> : <img src={filmBladeRunner} alt="" />} */}
+                    <img src={srcImg} alt="" />
                 </div>
                 <span className="style-title">{title}</span>
-                {isGird ? 
+                {isGrid ? 
                 (<>
                     <span className="genres">{genres}</span>
                     <Button title={"7.5"} text_color={"white"} width={"40px"} height={"19px"} radius={"40px"} border_custom={"2px solid transparent"} font_size_text={"12px"}></Button>
