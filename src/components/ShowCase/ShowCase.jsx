@@ -20,11 +20,11 @@ export const ShowCase = () => {
     const dispatch = useDispatch();
     let rawData = useSelector(state => state.movie.movies);
     useEffect(() => {
-        dispatch.movie.getMovieShowCase();
+        dispatch.movie.getAll();
     }, [])
-
+    let data = rawData.slice(0, 12);
     var listCard = [];
-    for (var movieObj of rawData.entries()) {
+    for (var movieObj of data.entries()) {
         let [index, movie] = movieObj;
         const driveLink = movie.movieImage;
         const fileId = driveLink.match(/[-\w]{25,}/);

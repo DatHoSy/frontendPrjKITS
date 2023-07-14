@@ -19,15 +19,8 @@ export const movie = {
             this.setData(data.data)
         },
 
-        async getMovieShowCase() {
-            const data = await fetch('http://localhost:8080/movie/showcase?limit=12')
-                .then(res => res.json())
-                .catch(error => console.log('Authorization failed: ' + error.message));
-            this.setData(data.data)
-        },
-
-        async getMoviesGrid() {
-            const data = await fetch('http://localhost:8080/movie/showcase?limit=10')
+        async getMoviesLimit(i) {
+            const data = await fetch('http://localhost:8080/movie/limit?limit='+ i)
                 .then(res => res.json())
                 .catch(error => console.log('Authorization failed: ' + error.message));
             this.setData(data.data)

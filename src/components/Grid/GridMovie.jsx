@@ -44,13 +44,14 @@ const StyledGrid = styled.div`
 export const GridMovie = () => {
     const dispatch = useDispatch();
     let rawData = useSelector(state => state.movie.movies);
-    useEffect(() => {
-        dispatch.movie.getMoviesGrid();
-    }, [])
-
+    let data = rawData.slice(0, 10);
+    // useEffect(() => {
+    //     dispatch.movie.;
+    // }, [])
     var listCard1 = [];
     var listCard2 = [];
-    for (var movieObj of rawData.entries()) {
+    console.log("List SIZE: " + rawData.length);
+    for (var movieObj of data.entries()) {
         let [index, movie] = movieObj;
         const driveLink = movie.movieImage;
         const fileId = driveLink.match(/[-\w]{25,}/);
